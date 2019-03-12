@@ -89,6 +89,7 @@
 
 // Define this for the Ultimaker Heated Bed Kit
 // #define ULTIMAKER_HBK
+#define TEMP_SENSOR_BED 20
 
 // Let's make it a bit clear in the code:
 #if MOTHERBOARD == 72
@@ -362,6 +363,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define DISABLE_Z false
 #define DISABLE_E false // For all extruders
 
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR true
 #ifndef INVERT_X_DIR
   #define INVERT_X_DIR true    // for Mendel set to false, for Orca set to true
 #endif
@@ -618,6 +621,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 //#define SD_CHECK_AND_RETRY // Use CRC checks and retries on the SD communication
 //#define ENCODER_PULSES_PER_STEP 1 // Increase if you have a high resolution encoder
 //#define ENCODER_STEPS_PER_MENU_ITEM 5 // Set according to ENCODER_PULSES_PER_STEP or your liking
+#define NO_ULTIMAKERCONTROLLER  // Kludge do allow alternate controller without editing this file...
 #ifndef NO_ULTIMAKERCONTROLLER  // Kludge do allow alternate controller without editing this file...
 #define ULTIMAKERCONTROLLER //as available from the Ultimaker online store.
 #endif
